@@ -1,5 +1,5 @@
 // Map characters in T to the frequency the character appares in T.
-function frequencyHashTable(str) {
+export function frequencyHashTable(str) {
   const charsFrequency = {};
   for (let i = 0; i < str.length; i++) {
     if (charsFrequency.hasOwnProperty(str[i])) {
@@ -11,4 +11,4 @@ function frequencyHashTable(str) {
   return charsFrequency;
 }
 
-console.log(frequencyHashTable('the quick brown fox jumped over the fence'));
+//console.log(frequencyHashTable('the quick brown fox jumped over the fence'));
