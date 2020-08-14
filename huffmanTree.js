@@ -1,4 +1,5 @@
 import * as compressionHashTable from './compression-hash-table.js';
+import * as priorityQueue from './minHeap.js';
 
 const freqHash = compressionHashTable.frequencyHashTable(
   'the quick brown fox jumped over the fence'
@@ -17,4 +18,4 @@ function getAllNodes(obj) {
   return allNodes;
 }
 
-console.log(getAllNodes(freqHash));
+// Construct a priority queue (min heap) for all the nodes.
