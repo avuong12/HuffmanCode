@@ -1,0 +1,11 @@
+{
+  "name": "huffman-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "compression-hash-table.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vuong.angela@gmail.com"
+}
