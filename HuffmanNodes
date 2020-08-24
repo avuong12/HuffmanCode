@@ -1,0 +1,108 @@
+HuffmanNodes {
+  char: null,
+  count: 41,
+  left: HuffmanNodes {
+    char: null,
+    count: 16,
+    left: HuffmanNodes {
+      char: null,
+      count: 8,
+      left: [HuffmanNodes],
+      right: [HuffmanNodes]
+    },
+    right: HuffmanNodes {
+      char: null,
+      count: 8,
+      left: [HuffmanNodes],
+      right: [HuffmanNodes]
+    }
+  },
+  right: HuffmanNodes {
+    char: null,
+    count: 25,
+    left: HuffmanNodes {
+      char: null,
+      count: 11,
+      left: [HuffmanNodes],
+      right: [HuffmanNodes]
+    },
+    right: HuffmanNodes {
+      char: null,
+      count: 14,
+      left: [HuffmanNodes],
+      right: [HuffmanNodes]
+    }
+  }
+}
+
+[ { char: null, count: 41 } ]
+[ { char: null, count: 16 }, { char: null, count: 25 } ]
+[
+  { char: null, count: 8 },
+  { char: null, count: 8 },
+  { char: null, count: 11 },
+  { char: null, count: 14 }
+]
+[
+  { char: null, count: 4 },
+  { char: null, count: 4 },
+  { char: null, count: 4 },
+  { char: null, count: 4 },
+  { char: null, count: 5 },
+  { char: 'e', count: 6 },
+  { char: null, count: 7 },
+  { char: ' ', count: 7 }
+]
+[
+  { char: null, count: 2 },
+  { char: null, count: 2 },
+  { char: 'r', count: 2 },
+  { char: null, count: 2 },
+  { char: 'f', count: 2 },
+  { char: null, count: 2 },
+  { char: 'u', count: 2 },
+  { char: 'n', count: 2 },
+  { char: 't', count: 2 },
+  { char: null, count: 3 },
+  { char: 'o', count: 3 },
+  { char: null, count: 4 }
+]
+[
+  { char: 'b', count: 1 },
+  { char: 'd', count: 1 },
+  { char: 'p', count: 1 },
+  { char: 'k', count: 1 },
+  { char: 'i', count: 1 },
+  { char: 'w', count: 1 },
+  { char: 'q', count: 1 },
+  { char: 'v', count: 1 },
+  { char: 'j', count: 1 },
+  { char: null, count: 2 },
+  { char: 'h', count: 2 },
+  { char: 'c', count: 2 }
+]
+[ { char: 'x', count: 1 }, { char: 'm', count: 1 } ]
+
+{
+  b: [ 0, 0, 0, 0, 0 ],
+  d: [ 0, 0, 0, 0, 1 ],
+  p: [ 0, 0, 0, 1, 0 ],
+  k: [ 0, 0, 0, 1, 1 ],
+  r: [ 0, 0, 1, 0 ],
+  i: [ 0, 0, 1, 1, 0 ],
+  w: [ 0, 0, 1, 1, 1 ],
+  f: [ 0, 1, 0, 0 ],
+  q: [ 0, 1, 0, 1, 0 ],
+  v: [ 0, 1, 0, 1, 1 ],
+  u: [ 0, 1, 1, 0 ],
+  n: [ 0, 1, 1, 1 ],
+  t: [ 1, 0, 0, 0 ],
+  j: [ 1, 0, 0, 1, 0 ],
+  x: [ 1, 0, 0, 1, 1, 0 ],
+  m: [ 1, 0, 0, 1, 1, 1 ],
+  e: [ 1, 0, 1 ],
+  o: [ 1, 1, 0, 0 ],
+  h: [ 1, 1, 0, 1, 0 ],
+  c: [ 1, 1, 0, 1, 1 ],
+  ' ': [ 1, 1, 1 ]
+}

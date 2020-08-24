@@ -74,4 +74,18 @@ export class MinHeap {
   size() {
     return this.heap.length;
   }
+
+  verifyHeap() {
+    for (let i = 0; i < this.heap.length; i++) {
+      let leftChildIndex = 2 * i + 1;
+      let rightChildIndex = 2 * i + 2;
+      if (
+        this.heap[i] > this.heap[leftChildIndex] ||
+        this.heap[i] > this.heap[rightChildIndex]
+      ) {
+        return false;
+      }
+    }
+    return true;
+  }
 }
