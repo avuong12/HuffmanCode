@@ -1,9 +1,6 @@
 import * as compressionHashTable from './compression-hash-table.js';
 import * as priorityQueue from './minHeap.js';
-
-const freqHash = compressionHashTable.frequencyHashTable(
-  'the quick brown fox jumped over the fence'
-);
+import * as decompressionCode from './decompression.js';
 
 class HuffmanNode {
   constructor(count, char = null, left = null, right = null) {
@@ -21,8 +18,6 @@ function getAllNodes(obj) {
   }
   return allNodes;
 }
-
-const freqNodes = getAllNodes(freqHash);
 
 // Construct a priority queue (min heap) for all the nodes in an array.
 
@@ -48,8 +43,6 @@ function combineNodes(nodeA, nodeB) {
   combinedNode.right = nodeB;
   return combinedNode;
 }
-
-// console.log(huffmanTree(freqNodes));
 
 function travsersBFS(tree) {
   let queue = [];
@@ -85,8 +78,6 @@ function travsersBFS(tree) {
   console.log(printString);
 }
 
-const freqTree = huffmanTree(freqNodes);
-
 function huffmanCode(tree, codeObject = {}, path = []) {
   if (tree.left === null && tree.right === null) {
     codeObject[tree.char] = path;
@@ -103,4 +94,20 @@ function huffmanCode(tree, codeObject = {}, path = []) {
   return codeObject;
 }
 
-console.log(huffmanCode(freqTree));
+// Returns an array of the message in the huffman code.
+function messageCode(message) {
+  const freqHash = compressionHashTable.frequencyHashTable(message);
+  const freqNodes = getAllNodes(freqHash);
+  const freqTree = huffmanTree(freqNodes);
+  const codeObj = huffmanCode(freqTree);
+
+  let codeArray = [];
+  for (let i = 0; i < message.length; i++) {
+    codeArray = codeArray.concat(codeObj[message[i]]);
+  }
+  return { huffmanTree: freqTree, code: codeArray };
+}
+
+let code = messageCode('the quick brown fox jumped over the fence');
+
+console.log(decompressionCode.decompressCode(code.huffmanTree, code.code));
